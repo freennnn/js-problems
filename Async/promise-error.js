@@ -6,6 +6,10 @@
   .then((value) => {
      console.log(value)
      //throw new Error("p2 throws")
+    }, (err) => {
+      console.log(err.message)
+      console.log('we are strong, let\'s recover')
+      return 'Nope, the logic won\'t be skipped now'
     })
   .then((value) => {
     console.log(`This logic will be skipped ${value}`)
